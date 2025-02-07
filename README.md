@@ -1,2 +1,2 @@
-# AR_Darts
+# Teesside-AR-Darts
 Third year university AR Module
