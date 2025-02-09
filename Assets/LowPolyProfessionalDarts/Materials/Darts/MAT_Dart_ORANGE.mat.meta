@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 55df06066fc937d4da55b21075ca8d1f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21649
+  packageName: Professional Darts
+  packageVersion: 2.0.1
+  assetPath: Assets/LowPolyProfessionalDarts/Materials/Darts/MAT_Dart_ORANGE.mat
+  uploadId: 605070

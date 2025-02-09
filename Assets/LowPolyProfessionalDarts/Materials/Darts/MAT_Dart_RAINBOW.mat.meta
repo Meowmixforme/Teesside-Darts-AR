@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c828d1ed2f792ab4d985428e0963998b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21649
+  packageName: Professional Darts
+  packageVersion: 2.0.1
+  assetPath: Assets/LowPolyProfessionalDarts/Materials/Darts/MAT_Dart_RAINBOW.mat
+  uploadId: 605070

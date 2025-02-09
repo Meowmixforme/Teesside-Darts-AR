@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c8df7f0c5dcc42349a7be3c38bf8a4a4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21649
+  packageName: Professional Darts
+  packageVersion: 2.0.1
+  assetPath: Assets/LowPolyProfessionalDarts/Materials/Boards/MAT_Board_YELLOW.mat
+  uploadId: 605070
