@@ -15,8 +15,10 @@ public class DartControl : MonoBehaviour
     Transform db;
     private GameObject DartTemp;
     private Rigidbody rb;
-    
-    
+
+    private bool canThrow = true;
+    private float throwCooldown = 1f; // 1 second cooldown
+
     private bool isDBSearched = false;
     private float dist = 0f;
     private float framespersec = 0f;
@@ -24,7 +26,7 @@ public class DartControl : MonoBehaviour
     public TMP_Text fps;
 
     private float timer = 0.0f;
-    private float frames = 0.0f; 
+    private float frames = 0.0f;
     private float waitTime = 1.0f;
 
     void Start()
@@ -48,7 +50,7 @@ public class DartControl : MonoBehaviour
         timer += Time.deltaTime;
         frames += 1;
 
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && canThrow)
         {
             Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit raycasthit;
@@ -62,7 +64,8 @@ public class DartControl : MonoBehaviour
 
                     ThrowDart currentDartScript = DartTemp.GetComponent<ThrowDart>();
                     currentDartScript.isForceOK = true;
-                
+
+                    StartCoroutine(ThrowCooldown());
                     DartsInit();
                 }
             }
@@ -76,14 +79,12 @@ public class DartControl : MonoBehaviour
 
         if (timer > waitTime)
         {
-            framespersec = frames/timer;
+            framespersec = frames / timer;
             timer -= waitTime;
             frames = 0.0f;
         }
 
         fps.text = framespersec.ToString();
-
-
     }
 
     void DartsInit()
@@ -93,7 +94,7 @@ public class DartControl : MonoBehaviour
         {
             isDBSearched = true;
         }
-        
+
         StartCoroutine(WaitAndSpawnDart());
     }
 
@@ -104,5 +105,12 @@ public class DartControl : MonoBehaviour
         DartTemp.transform.parent = ARCam.transform;
         rb = DartTemp.GetComponent<Rigidbody>();
         rb.isKinematic = true;
+    }
+
+    private IEnumerator ThrowCooldown()
+    {
+        canThrow = false;
+        yield return new WaitForSeconds(throwCooldown);
+        canThrow = true;
     }
 }
