@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40919615}
   m_Layer: 0
-  m_Name: Placer
+  m_Name: IndicatorPlacement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7d18034f51ad347b6a5892b2f31c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Object: {fileID: 2943421204200904537, guid: 79dc54ef80592400bb0019da7256624b, type: 3}
+  Object: {fileID: 6322627399499671687, guid: 79dc54ef80592400bb0019da7256624b, type: 3}
   Placer: {fileID: 40919614}
 --- !u!114 &223974231
 MonoBehaviour:
