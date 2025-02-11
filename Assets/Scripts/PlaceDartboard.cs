@@ -14,18 +14,20 @@ public class PlaceDartboard : MonoBehaviour
     private bool PoseValid = false;
     private bool isObjectPlaced = false;
     private TrackableId PlaneID = TrackableId.invalidId;
-    
-    
+    private DartScoring dartScoring;
+    private GameObject spawnedDartboard;
+
     ARRaycastManager m_RaycastManager;
     static List<ARRaycastHit> Hits = new List<ARRaycastHit>();
 
     public static event Action onPlacedObject;
 
-    void Awake(){
+    void Awake()
+    {
         m_RaycastManager = GetComponent<ARRaycastManager>();
+        dartScoring = FindObjectOfType<DartScoring>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!isObjectPlaced)
@@ -43,7 +45,7 @@ public class PlaceDartboard : MonoBehaviour
     private void UpdatePlacementPosition()
     {
         var screenCenter = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
-        if(m_RaycastManager.Raycast(screenCenter, Hits, TrackableType.PlaneWithinPolygon))
+        if (m_RaycastManager.Raycast(screenCenter, Hits, TrackableType.PlaneWithinPolygon))
         {
             PoseValid = Hits.Count > 0;
             if (PoseValid)
@@ -57,8 +59,6 @@ public class PlaceDartboard : MonoBehaviour
             }
         }
     }
-    //end of UpdatePlacementPosition
-
 
     private void UpdatePlacementIndicator()
     {
@@ -72,15 +72,19 @@ public class PlaceDartboard : MonoBehaviour
             Placer.SetActive(false);
         }
     }
-    //end of UpdatePlacer
 
     private void PlaceObject()
     {
-        Instantiate(Object, PlacerPose.position, PlacerPose.rotation);
+        spawnedDartboard = Instantiate(Object, PlacerPose.position, PlacerPose.rotation);
+
+        // Setup dartboard for scoring
+        if (dartScoring != null)
+        {
+            dartScoring.SetupDartboard(spawnedDartboard);
+        }
 
         onPlacedObject?.Invoke();
         isObjectPlaced = true;
         Placer.SetActive(false);
-        
     }
 }

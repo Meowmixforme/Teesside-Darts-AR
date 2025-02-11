@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using TMPro;
+
 public class ThrowDart : MonoBehaviour
 {
-
     private Rigidbody rg;
     private GameObject d;
     public bool isForceOK = false;
@@ -17,15 +17,22 @@ public class ThrowDart : MonoBehaviour
     GameObject ARCam;
 
     public Collider dartCollider;
+    private DartScoring dartScoring; // Add this
 
-    // Start is called before the first frame update
     void Start()
     {
         ARSession = GameObject.Find("AR Session Origin").GetComponent<ARSessionOrigin>();
-        ARCam = ARSession.transform.Find("AR Camera").gameObject;    
+        ARCam = ARSession.transform.Find("AR Camera").gameObject;
 
         rg = gameObject.GetComponent<Rigidbody>();
         d = GameObject.Find("Spawn");
+
+        // Add this to find DartScoring
+        dartScoring = FindObjectOfType<DartScoring>();
+        if (dartScoring == null)
+        {
+            Debug.LogError("DartScoring component not found!");
+        }
     }
 
     private void FixedUpdate()
@@ -67,19 +74,19 @@ public class ThrowDart : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // if (other.GetComponent<Collider>().name.ToString() == "HitArea.001")
-        // {
-        //     Application.Quit();
-        // }
-
         if (other.CompareTag("dart_board"))
         {
             Handheld.Vibrate();
 
             GetComponent<Rigidbody>().isKinematic = true;
             isDartRotation = false;
-
             isDartOnBoard = true;
+
+            // Add scoring
+            if (dartScoring != null)
+            {
+                dartScoring.ScoreDart(other);
+            }
         }
     }
 }
