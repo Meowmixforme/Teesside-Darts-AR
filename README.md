@@ -13,6 +13,7 @@ To get the dartboard scores correctly there are several options. A series of rin
 Instead, a better method is to map the hit areas and use a colour like hot pink to mark where these show up in game. It was originally thought that the hit areas corresponded to the actual board numbers (1 is single 1, 2 is single 2) but as can be seen from manually mapping the hit areas this isn't the case.
 
 Inner Singles:
+
 1 was wood is single 1
 
 2 was black is single 18
@@ -55,6 +56,7 @@ Ring was black and is single 20
 
 
 Outer Single:
+
 19 was black and is single 20
 
 20 was wood and is single 1
@@ -96,7 +98,8 @@ Outer Single:
 38 was wood and is single 5
 
 
-Triple Ring
+Triple Ring:
+
 39 was red and is triple 20
 
 40 was green and is triple 1
@@ -138,7 +141,8 @@ Triple Ring
 58 was green and is triple 5
 
 
-Double Ring
+Double Ring:
+
 59 was red and is double 20
 
 60 was green and is double 1
@@ -180,7 +184,8 @@ Double Ring
 78 was green and is double 5
 
 
-Bulls
+Bulls:
+
 Ring.007 was green and is the outer bull
 
 Ring.008 was red and is the inner bull
