@@ -25,7 +25,7 @@ public class PlaceDartboard : MonoBehaviour
     // Event to notify when object is placed
     public static event Action onPlacedObject;
 
-    // Initialize components
+    // Initialise components
     void Awake()
     {
         m_RaycastManager = GetComponent<ARRaycastManager>();
@@ -89,7 +89,7 @@ public class PlaceDartboard : MonoBehaviour
         // Instantiate dartboard
         spawnedDartboard = Instantiate(Object, PlacerPose.position, PlacerPose.rotation);
 
-        // Initialize dartboard scoring
+        // Initialise dartboard scoring
         if (dartScoring != null)
         {
             dartScoring.SetupDartboard(spawnedDartboard);
