@@ -23,7 +23,7 @@ public class ThrowDart : MonoBehaviour
 
     public Collider dartCollider;          // Dart's collider component
 
-    // Initialize components and references
+    // Initialise components and references
     void Start()
     {
         // Find AR components
