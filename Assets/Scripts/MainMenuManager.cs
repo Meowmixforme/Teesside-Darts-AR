@@ -11,7 +11,7 @@ public class MainMenuManager : MonoBehaviour
     // Reference to scoring system
     private DartScoring dartScoring;    // Handles game scoring logic
 
-    // Initialize references and show menu on start
+    // Initialise references and show menu on start
     void Start()
     {
         dartScoring = FindObjectOfType<DartScoring>();
