@@ -12,26 +12,26 @@ public class ARPlaneController : MonoBehaviour
     // Reference to the AR Plane Manager component
     ARPlaneManager m_ARPlaneManager;
 
-    // Initialize the AR Plane Manager reference when the object is created
+    // Initialise the AR Plane Manager reference when the object is created
     void Awake()
     {
         m_ARPlaneManager = GetComponent<ARPlaneManager>();
     }
 
-    // Subscribe to the dartboard placement event when this component is enabled
+    // Register to the dartboard placement event when this component is enabled
     void OnEnable()
     {
         PlaceDartboard.onPlacedObject += DisablePlaneDetection;
     }
 
-    // Unsubscribe from the dartboard placement event when this component is disabled
+    // Unregister from the dartboard placement event when this component is disabled
     void OnDisable()
     {
         PlaceDartboard.onPlacedObject -= DisablePlaneDetection;
     }
 
     // Called when the dartboard is placed
-    // Disables plane visualization and plane detection
+    // Disables plane visualisation and plane detection
     void DisablePlaneDetection()
     {
         SetAllPlanesActive(false);  // Hide all detected planes
