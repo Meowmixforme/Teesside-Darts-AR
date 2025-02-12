@@ -34,20 +34,20 @@ public class DartControl : MonoBehaviour
     private float frames = 0.0f;
     private float waitTime = 1.0f;
 
-    // Initialize AR components
+    // Initialise AR components
     void Start()
     {
         ARSession = GameObject.Find("AR Session Origin").GetComponent<ARSessionOrigin>();
         ARCam = ARSession.transform.Find("AR Camera").gameObject;
     }
 
-    // Subscribe to dartboard placement event
+    // Register to dartboard placement event
     void OnEnable()
     {
         PlaceDartboard.onPlacedObject += DartsInit;
     }
 
-    // Unsubscribe from dartboard placement event
+    // Unregister from dartboard placement event
     void OnDisable()
     {
         PlaceDartboard.onPlacedObject -= DartsInit;
@@ -100,7 +100,7 @@ public class DartControl : MonoBehaviour
         fps.text = framespersec.ToString();
     }
 
-    // Initialize darts after dartboard placement
+    // Initialise darts after dartboard placement
     void DartsInit()
     {
         db = GameObject.FindWithTag("dart_board").transform;
