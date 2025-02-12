@@ -18,7 +18,7 @@ public class ARFeatheredPlaneMeshVisualizer : MonoBehaviour
         set { m_FeatheringWidth = value; }
     }
 
-    // Initialize required components when the object is created
+    // Initialise required components when the object is created
     void Awake()
     {
         m_PlaneMeshVisualizer = GetComponent<ARPlaneMeshVisualizer>();
