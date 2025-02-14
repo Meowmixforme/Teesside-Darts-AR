@@ -12,7 +12,7 @@ public class ARPlaneController : MonoBehaviour
     // Reference to the AR Plane Manager component
     ARPlaneManager m_ARPlaneManager;
 
-    // Initialize the AR Plane Manager reference when the object is created
+    // Initialise the AR Plane Manager reference when the object is created
     void Awake()
     {
         m_ARPlaneManager = GetComponent<ARPlaneManager>();
