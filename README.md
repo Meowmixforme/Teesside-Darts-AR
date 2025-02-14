@@ -1,6 +1,8 @@
 # Teesside-AR-Darts
 Third-year university AR Module
 
+View the Wiki for more information
+
 Built using Unity3D (2021.3.10f1)
 
 All assets are from: AR Dart Game - Augmented Reality Game (Tofaani)
