@@ -8,11 +8,11 @@ Built using Unity3D (2021.3.10f1)
 All assets are from: AR Dart Game - Augmented Reality Game (Tofaani)
 
 The instructions provided to get the board up and running didn't work, so it was decided to learn from official documentation and courses on Packt.
-The scripts that were made available in the Asset package were used as a base and have all been heavily modified so as to implement additional features.
+The scripts that were made available in the Asset package were used as a base and have all been heavily modified to implement additional features.
 
 
-To get the dartboard scores correctly there are several options. A series of rings could have been used from the circumference of the board, but the numbers would change if the board wasn't bang on straight.
-Instead, a better method is to map the hit areas and use a colour like hot pink to mark where these show up in game. It was originally thought that the hit areas corresponded to the actual board numbers (1 is single 1, 2 is single 2) but as can be seen from manually mapping the hit areas this isn't the case.
+To get the dartboard scores correctly, there are several options. A series of rings could have been used from the circumference of the board, but the numbers would change if the board weren't bang on straight.
+Instead, a better method is to map the hit areas and use a colour like hot pink to mark where these show up in-game. It was originally thought that the hit areas corresponded to the actual board numbers (1 is single 1, 2 is single 2), but as can be seen from manually mapping the hit areas this isn't the case.
 
 Inner Singles:
 
@@ -198,4 +198,8 @@ Ring.008 was red and is the inner bull
 
 
 
-The game was mostly built and tested while in hospital for various procedures and proved to be very entertaining.
+The game was mostly built and tested while in the hospital for various procedures, and proved very entertaining.
+
+  Click on the thumbnail to view the Demonstration video
+
+[![YouTube Video Thumbnail](https://img.youtube.com/vi/vy2q_YZ4XKA/0.jpg)](https://www.youtube.com/watch?v=vy2q_YZ4XKA)
