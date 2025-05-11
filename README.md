@@ -11,7 +11,7 @@ The instructions provided to get the board up and running didn't work, so it was
 The scripts that were made available in the Asset package were used as a base and have all been heavily modified to implement additional features.
 
 
-To get the dartboard scores correctly, there are several options. A series of rings could have been used from the circumference of the board, but the numbers would change if the board weren't bang on straight.
+To get the dartboard scores correctly, there are several options. A series of rings could have been used from the circumference of the board, but the numbers would change if the board wasn't straight.
 Instead, a better method is to map the hit areas and use a colour like hot pink to mark where these show up in-game. It was originally thought that the hit areas corresponded to the actual board numbers (1 is single 1, 2 is single 2), but as can be seen from manually mapping the hit areas this isn't the case.
 
 Inner Singles:
