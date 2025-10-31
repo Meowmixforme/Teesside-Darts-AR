@@ -274,4 +274,4 @@ The game was mostly built and tested while in the hospital for various procedure
 
   Click on the thumbnail to view the Demonstration video
 
-[![YouTube Video Thumbnail](https://img.youtube.com/vi/wNMX7QHwrc0/0.jpg)](https://www.youtube.com/shorts/wNMX7QHwrc0)
+[![YouTube Video Thumbnail](https://img.youtube.com/vi/PwIPxybGiJ0/0.jpg)](https://youtube.com/shorts/PwIPxybGiJ0)
