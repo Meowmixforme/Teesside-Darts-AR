@@ -1,7 +1,7 @@
 # Teesside-AR-Darts
 Third-year university AR Module
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/wNMX7QHwrc0/0.jpg)](https://www.youtube.com/watch?v=wNMX7QHwrc0)
+[![YouTube Video Thumbnail](https://img.youtube.com/vi/PwIPxybGiJ0/0.jpg)](https://youtube.com/shorts/PwIPxybGiJ0)
 
 
 
